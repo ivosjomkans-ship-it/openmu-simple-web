@@ -1,37 +1,94 @@
 @page "/"
 @{
-    ViewData["Title"] = "OpenMU";
+    ViewData["Title"] = "Welcome";
     ViewData["ContainerClass"] = "index-container";
     ViewData["ActivePage"] = "/";
 }
 
-<div class="index-grid">
-    <div class="index-left">
-        <div class="index-title" id="welcomeTitle">Welcome to OpenMU</div>
-        <div class="index-text" id="welcomeText"></div>
-        <div class="details-list" id="detailsList"></div>
-    </div>
-
-    <div class="index-right">
-        <div class="index-status-row">
-            <div class="index-status">
-                <div class="status-dot-box" id="indexStatusDot"></div>
-                <div class="status-value" id="indexStatusText">---</div>
-                <div class="status-label" data-i18n="srvStatus">Server Status</div>
-            </div>
-            <div class="index-status">
-                <div class="players-value" id="indexPlayersText">0</div>
-                <div class="status-label" data-i18n="playersOnline">Online Players</div>
-            </div>
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE LEGEND RETURNS</div>
+        <h1>YOUR LEGEND.<br><span>YOUR LEGACY.</span></h1>
+        <p class="hero-description">Enter the world of MU. Fight for glory, forge your destiny and become a legend.</p>
+        <div class="hero-actions">
+            <a class="button-primary" href="/register">CREATE ACCOUNT <span>↗</span></a>
+            <a class="button-secondary" href="#server-info">EXPLORE SERVER</a>
         </div>
-        <div id="downloadArea" class="dl-area"></div>
+        <div class="hero-edition">SEASON 6 · EPISODE 3</div>
     </div>
-</div>
+    <div class="hero-side-label">MU ONLINE — THE CONTINENT OF LEGEND</div>
+    <div class="hero-bottom">
+        <span>BUILT FOR WARRIORS</span>
+        <span>EST. IN THE WORLD OF MU</span>
+    </div>
+</section>
+
+<section class="server-strip" id="server-info">
+    <div class="server-strip-title">
+        <span class="live-indicator"></span>
+        <div><strong>REALM INFORMATION</strong><small>LIVE SERVER OVERVIEW</small></div>
+    </div>
+    <div class="server-metric">
+        <span class="metric-label">SERVER STATUS</span>
+        <strong id="indexStatusText">CHECKING</strong>
+        <span class="metric-sub">REALM AVAILABILITY</span>
+        <span class="status-dot-box" id="indexStatusDot"></span>
+    </div>
+    <div class="server-metric">
+        <span class="metric-label">PLAYERS ONLINE</span>
+        <strong id="indexPlayersText">—</strong>
+        <span class="metric-sub">CURRENTLY IN GAME</span>
+    </div>
+    <div class="server-metric">
+        <span class="metric-label">EXPERIENCE</span>
+        <strong>x50</strong>
+        <span class="metric-sub">MASTER EXP x30</span>
+    </div>
+    <div class="server-metric">
+        <span class="metric-label">DROP RATE</span>
+        <strong>70%</strong>
+        <span class="metric-sub">ADVENTURE AWAITS</span>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-heading">
+        <div><span class="section-kicker">THE WORLD AWAITS</span><h2>CHOOSE YOUR <span>DESTINY</span></h2></div>
+        <p>Everything you need to begin your journey across the continent of MU.</p>
+    </div>
+    <div class="feature-grid">
+        <a class="feature-card feature-register" href="/register">
+            <span class="feature-number">01 / BEGIN</span>
+            <div><span class="feature-icon">✦</span><h3>CREATE ACCOUNT</h3><p>Claim your place in the world. Your adventure starts with a new account.</p><b>JOIN THE REALM ↗</b></div>
+        </a>
+        <a class="feature-card feature-stats" href="/stats">
+            <span class="feature-number">02 / COMPETE</span>
+            <div><span class="feature-icon">♜</span><h3>SERVER RANKINGS</h3><p>Discover the strongest heroes and follow the competition.</p><b>VIEW RANKINGS ↗</b></div>
+        </a>
+        <a class="feature-card feature-armory" href="/armory">
+            <span class="feature-number">03 / PREPARE</span>
+            <div><span class="feature-icon">⚔</span><h3>THE ARMORY</h3><p>Explore equipment, items and the tools of legendary warriors.</p><b>EXPLORE ITEMS ↗</b></div>
+        </a>
+    </div>
+</section>
+
+<section class="download-section">
+    <div class="download-copy">
+        <span class="section-kicker">READY TO PLAY?</span>
+        <h2>THE CONTINENT<br><span>IS WAITING.</span></h2>
+        <p>Prepare your client, enter the realm and write your own legend.</p>
+    </div>
+    <div class="download-panel">
+        <div class="download-panel-top"><span>YOUR JOURNEY STARTS HERE</span><span class="download-symbol">↓</span></div>
+        <div id="downloadArea" class="dl-area"></div>
+        <div class="download-note">Choose an available client download to get started.</div>
+    </div>
+</section>
 
 @section Styles {
     <link rel="stylesheet" href="/css/index.css">
 }
-
 @section Scripts {
     <script src="/js/index.js"></script>
 }
